@@ -1,10 +1,10 @@
 # podinfo
 
-[![e2e](https://github.com/stefanprodan/podinfo/workflows/e2e/badge.svg)](https://github.com/stefanprodan/podinfo/blob/master/.github/workflows/e2e.yml)
-[![test](https://github.com/stefanprodan/podinfo/workflows/test/badge.svg)](https://github.com/stefanprodan/podinfo/blob/master/.github/workflows/test.yml)
-[![cve-scan](https://github.com/stefanprodan/podinfo/workflows/cve-scan/badge.svg)](https://github.com/stefanprodan/podinfo/blob/master/.github/workflows/cve-scan.yml)
-[![Go Report Card](https://goreportcard.com/badge/github.com/stefanprodan/podinfo)](https://goreportcard.com/report/github.com/stefanprodan/podinfo)
-[![Docker Pulls](https://img.shields.io/docker/pulls/stefanprodan/podinfo)](https://hub.docker.com/r/stefanprodan/podinfo)
+[![e2e](https://github.com/Summers1971/podinfo/workflows/e2e/badge.svg)](https://github.com/Summers1971/podinfo/blob/master/.github/workflows/e2e.yml)
+[![test](https://github.com/Summers1971/podinfo/workflows/test/badge.svg)](https://github.com/Summers1971/podinfo/blob/master/.github/workflows/test.yml)
+[![cve-scan](https://github.com/Summers1971/podinfo/workflows/cve-scan/badge.svg)](https://github.com/Summers1971/podinfo/blob/master/.github/workflows/cve-scan.yml)
+[![Go Report Card](https://goreportcard.com/badge/github.com/Summers1971/podinfo)](https://goreportcard.com/report/github.com/Summers1971/podinfo)
+[![Docker Pulls](https://img.shields.io/docker/pulls/Summers1971/podinfo)](https://hub.docker.com/r/Summers1971/podinfo)
 
 Podinfo is a tiny web application made with Go that showcases best practices of running microservices in Kubernetes.
 Podinfo is used by CNCF projects like [Flux](https://github.com/fluxcd/flux2) and [Flagger](https://github.com/fluxcd/flagger)
@@ -60,7 +60,7 @@ gRPC API:
 
 Web UI:
 
-![podinfo-ui](https://raw.githubusercontent.com/stefanprodan/podinfo/gh-pages/screens/podinfo-ui-v3.png)
+![podinfo-ui](https://raw.githubusercontent.com/Summers1971/podinfo/gh-pages/screens/podinfo-ui-v3.png)
 
 To access the Swagger UI open `<podinfo-host>/swagger/index.html` in a browser.
 
@@ -81,7 +81,7 @@ To access the Swagger UI open `<podinfo-host>/swagger/index.html` in a browser.
 Install from github.io:
 
 ```bash
-helm repo add podinfo https://stefanprodan.github.io/podinfo
+helm repo add podinfo https://Summers1971.github.io/podinfo
 
 helm upgrade --install --wait frontend \
 --namespace test \
@@ -101,19 +101,19 @@ Install from ghcr.io:
 
 ```bash
 helm upgrade --install --wait podinfo --namespace default \
-oci://ghcr.io/stefanprodan/charts/podinfo
+oci://ghcr.io/Summers1971/charts/podinfo
 ```
 
 #### Kustomize
 
 ```bash
-kubectl apply -k github.com/stefanprodan/podinfo//kustomize
+kubectl apply -k github.com/Summers1971/podinfo//kustomize
 ```
 
 #### Docker
 
 ```bash
-docker run -dp 9898:9898 stefanprodan/podinfo
+docker run -dp 9898:9898 Summers1971/podinfo
 ```
 
 ### Continuous Delivery
@@ -142,7 +142,7 @@ configure Flux to check for new chart releases every ten minutes:
 ```sh
 flux create source helm podinfo \
 --namespace=default \
---url=https://stefanprodan.github.io/podinfo \
+--url=https://Summers1971.github.io/podinfo \
 --interval=10m
 ```
 

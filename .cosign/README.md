@@ -14,8 +14,8 @@ brew install sigstore/tap/cosign
 Verify a podinfo release with cosign CLI:
 
 ```sh
-cosign verify -key https://raw.githubusercontent.com/stefanprodan/podinfo/master/cosign/cosign.pub \
-ghcr.io/stefanprodan/podinfo-deploy:latest
+cosign verify -key https://raw.githubusercontent.com/Summers1971/podinfo/master/cosign/cosign.pub \
+ghcr.io/Summers1971/podinfo-deploy:latest
 ```
 
 ## Download the artifacts with crane
@@ -29,7 +29,7 @@ brew install crane
 Download the podinfo deployment manifests with crane CLI:
 
 ```console
-$ crane export ghcr.io/stefanprodan/podinfo-deploy:latest -| tar -xf - 
+$ crane export ghcr.io/Summers1971/podinfo-deploy:latest -| tar -xf - 
 
 $ ls -1
 deployment.yaml

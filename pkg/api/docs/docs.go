@@ -12,11 +12,11 @@ const docTemplate = `{
         "title": "{{.Title}}",
         "contact": {
             "name": "Source Code",
-            "url": "https://github.com/stefanprodan/podinfo"
+            "url": "https://github.com/Summers1971/podinfo"
         },
         "license": {
             "name": "MIT License",
-            "url": "https://github.com/stefanprodan/podinfo/blob/master/LICENSE"
+            "url": "https://github.com/Summers1971/podinfo/blob/master/LICENSE"
         },
         "version": "{{.Version}}"
     },
