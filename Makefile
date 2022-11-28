@@ -4,7 +4,7 @@
 
 TAG?=latest
 NAME:=podinfo
-DOCKER_REPOSITORY:=stefanprodan
+DOCKER_REPOSITORY:=Summers1971
 DOCKER_IMAGE_NAME:=$(DOCKER_REPOSITORY)/$(NAME)
 GIT_COMMIT:=$(shell git describe --dirty --always)
 VERSION:=$(shell grep 'VERSION' pkg/version/version.go | awk '{ print $$4 }' | tr -d '"')
@@ -13,7 +13,7 @@ EXTRA_RUN_ARGS?=
 run:
 	go run -ldflags "-s -w -X github.com/stefanprodan/podinfo/pkg/version.REVISION=$(GIT_COMMIT)" cmd/podinfo/* \
 	--level=debug --grpc-port=9999 --backend-url=https://httpbin.org/status/401 --backend-url=https://httpbin.org/status/500 \
-	--ui-logo=https://raw.githubusercontent.com/stefanprodan/podinfo/gh-pages/cuddle_clap.gif $(EXTRA_RUN_ARGS)
+	--ui-logo=https://raw.githubusercontent.com/Summers1971/podinfo/gh-pages/cuddle_clap.gif $(EXTRA_RUN_ARGS)
 
 .PHONY: test
 test:
